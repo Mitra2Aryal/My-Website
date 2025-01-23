@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -7,12 +7,10 @@
     <title>Mitra Aryal - Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Existing styles */
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #212529;
         }
 
         .navbar {
@@ -28,100 +26,73 @@
             color: #d1ecf1;
         }
 
-        .main-section {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #e9ecef;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-picture {
+        .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #007bff;
+            border: 5px solid #007bff;
         }
 
-        .subtitle {
-            font-size: 1.5rem;
-            color: #6c757d;
+        .social-links a {
+            margin: 0 10px;
+            color: #007bff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .description {
-            margin: 20px 0;
-            color: #555;
+        .social-links a:hover {
+            color: #0056b3;
         }
 
-        .contact-section {
-            background-color: #007bff;
-            color: #fff;
+        section {
+            margin-bottom: 30px;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        .contact-section h4 {
-            margin-bottom: 20px;
+        #home {
+            background-color: #e3f2fd;
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        #about {
+            background-color: #fff3e0;
         }
 
-        .contact-form button {
-            background-color: #0056b3;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        #portfolio {
+            background-color: #e8f5e9;
         }
 
-        .contact-form button:hover {
-            background-color: #003f7f;
+        #contact {
+            background-color: #fce4ec;
         }
 
         footer {
+            background-color: #212529;
+            color: #ffffff;
             text-align: center;
-            padding: 40px 20px;
-            background-color: #343a40;
-            color: #fff;
-            margin-top: 30px;
+            padding: 15px 0;
         }
 
-        footer h5 {
-            color: #ffc107;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
         }
 
-        footer a {
-            color: #17a2b8;
-            text-decoration: none;
-        }
+        @media (max-width: 576px) {
+            section {
+                padding: 20px;
+            }
 
-        footer a:hover {
-            color: #0dcaf0;
-        }
-
-        .footer-section {
-            margin: 20px 0;
-        }
-
-        .footer-section p {
-            margin-bottom: 10px;
-        }
-
-        .copyright {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #aaa;
+            .social-links a {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -136,7 +107,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">My Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -146,60 +123,51 @@
         </div>
     </nav>
 
-    <div class="container main-section" id="about">
-        <img src="Mpa.jpg" alt="Mitra Aryal" class="profile-picture">
-        <h1>Mitra Aryal</h1>
-        <p class="subtitle">Management Student</p>
-        <p class="description">
-            I am here to support your journey towards mastering technology, Share Market, and achieving career success. My
-            role is to guide you through the complexities of IT and Share Market, making learning engaging and effective.
-        </p>
-    </div>
+    <main>
+        <section id="home" class="container text-center py-5">
+            <img src="Mpa.jpg" alt="Mitra Aryal" class="profile-pic mb-3">
+            <h1 class="mb-2">Mitra Aryal</h1>
+            <h3 class="text-muted mb-4">I am a Management Student</h3>
+            <p class="mb-4">
+                I am here to support your journey towards mastering technology, Share Market, and achieving career success. 
+                My role is to guide you through the complexities of IT, making learning engaging and effective.
+            </p>
+        </section>
 
-    <div class="container main-section" id="about">
-        <h2>About</h2>
-        <p>Hello, I am Mitra Aryal, a Management Student from Nepal. I am passionate about IT, Share Market, and helping others achieve their goals. Thank you for visiting my personal website.</p>
-    </div>
+        <section id="about" class="container text-center">
+            <h2 class="mb-4">About</h2>
+            <p>Hello, I am Mitra Aryal, a Management Student from Nepal.</p>
+            <p>Thank you for visiting my personal website!</p>
+        </section>
 
-    <footer id="contact">
-        <div class="contact-section">
-            <h4>Contact Me</h4>
-            <form class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5>Location</h5>
-                        <p>Kathmandu, Nepal</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Around the Web</h5>
-                        <a href="https://www.facebook.com/mitra2aryal" target="_blank">Facebook</a><br>
-                        <a href="https://www.youtube.com/channel/UCpLSUDhEZCM4tFE5RmJ-1-A" target="_blank">YouTube</a>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>About Me</h5>
-                        <p>I am a student. I love travelling, the Share Market, and Information Technology (IT).</p>
-                    </div>
+        <section id="portfolio" class="container text-center">
+            <h2 class="mb-4">My Portfolio</h2>
+            <div class="row g-3">
+                <div class="col-6 col-md-4">
+                    <img src="images/p1.jpg" alt="Portfolio 1" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/p2.jpg" alt="Portfolio 2" class="img-fluid rounded">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/p3.jpg" alt="Portfolio 3" class="img-fluid rounded">
                 </div>
             </div>
-        </div>
-        <div class="copyright">&copy; 2025 Mitra Aryal. All rights reserved.</div>
+        </section>
+
+        <section id="contact" class="container text-center">
+            <h2 class="mb-4">Contact</h2>
+            <p>If you wish to reach out to me, feel free to contact me through the following platforms:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mitra2aryal" target="_blank">Facebook</a>
+                <a href="mailto:mpshorts02@gmail.com">Email</a>
+                <a href="https://www.youtube.com/channel/UCpLSUDhEZCM4tFE5RmJ-1-A" target="_blank">YouTube</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="mb-0">&copy; 2025 Mitra Aryal. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -208,7 +176,7 @@
             link.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
